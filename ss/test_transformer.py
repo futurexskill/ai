@@ -25,7 +25,13 @@ class TransformTest(unittest.TestCase):
         print("CMS Author name is " + str(cms_author))
 
         self.assertEqual("Unknown", str(cms_author))
+    def test_should_throw_type_error(self):
+        spark = SparkSession.builder \
+            .appName("testing app") \
+            .enableHiveSupport().getOrCreate()
 
+        tranform_process = transform.Transform(spark)
+        with self.assertRaises(AttributeError):tranform_process.transform_data(None)
 
 if __name__ == '__main__':
     unittest.main()

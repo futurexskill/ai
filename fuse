@@ -187,3 +187,5 @@ FUSE file systems can also be encrypted using techniques such as LUKS (Linux Uni
 It's important to note that security considerations should be an important aspect of any FUSE file system implementation. It may be necessary to perform a security audit and implement additional security measures, depending on the specific requirements of the project.
 
 The Ozone-FUSE project is available on GitHub at the following link: https://github.com/apache/hadoop-ozone/tree/trunk/ozonefs
+
+I apologize for that. The Ozone-FUSE project has been moved to a different location in the Hadoop-Ozone repository. You can find it at the following link: https://github.com/apache/hadoop-ozone/tree/trunk/hadoop-ozone/ozonefs.

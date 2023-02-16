@@ -140,5 +140,23 @@ Here's a link to the React documentation, which provides an overview of React an
 Here's a link to a React file manager example on GitHub, which provides an example of how to build a simple file manager app in React: https://github.com/kiranlm/react-filemanager
 I hope these resources are helpful in getting started with your project!
 
+However, there are several resources available online that may be helpful in getting started with these technologies. Here are a few examples:
+
+FUSE implementation examples:
+
+FUSE-JNA (Java Native Access) is a FUSE implementation library for Java, which allows you to write FUSE file systems in Java. Here's a link to the FUSE-JNA repository on GitHub: https://github.com/EtiennePerot/fuse-jna
+FUSE-Python is a FUSE implementation library for Python, which allows you to write FUSE file systems in Python. Here's a link to the FUSE-Python repository on GitHub: https://github.com/libfuse/python-fuse
+Ozone file system API:
+
+Here's a link to the Apache Ozone documentation, which provides an overview of the Ozone file system API and how to use it: https://hadoop.apache.org/ozone/docs/1.1.0-alpha/ozonefs.html
+The Ozone CLI (command-line interface) can be a helpful tool for testing the Ozone file system API. Here's a link to the Ozone CLI documentation: https://hadoop.apache.org/ozone/docs/1.1.0-alpha/cli.html
+React:
+
+Here's a link to the React documentation, which provides an overview of React and how to use it: https://reactjs.org/docs/getting-started.html
+Here's a link to a React file manager example on GitHub, which provides an example of how to build a simple file manager app in React: https://github.com/kiranlm/react-filemanager
+I hope these resources are helpful in getting started with your project!
+
+
+
 
 

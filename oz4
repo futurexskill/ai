@@ -1,0 +1,12 @@
+Ozone access management can be done using the following steps:
+
+Create groups and users: The Ozone administrator can create groups and users, and assign appropriate permissions to them.
+Assign permissions: The administrator can then assign specific permissions to groups and users for specific directories or files within the Ozone file system.
+Audit and monitor: Ozone also provides auditing and monitoring capabilities to track access and changes to files and directories.
+To build a front-end Ozone interface, the following steps can be taken using REST APIs:
+
+Authenticate and authorize: The user will need to be authenticated and authorized using Kerberos and the Ozone access management system.
+Retrieve user information: Retrieve the user's information, such as their user ID and group membership.
+List directories: Use the Ozone REST API to list the directories that the user has access to.
+Manage files: Use the Ozone REST API to upload, download, and manage files within the user's directory.
+Audit and monitor: Use the Ozone REST API to retrieve audit and monitoring information.

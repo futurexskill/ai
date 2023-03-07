@@ -49,5 +49,5 @@ Finally, the code deletes the file using the delete method of the ozone_fs objec
 
 
 
-
+This command imports the fs module from the pyarrow package, which provides a Python interface to the OZONE FileSystem.
 

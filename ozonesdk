@@ -1,0 +1,53 @@
+import pyarrow as pa
+import pyarrow.fs as fs
+
+# Connect to the OZONE filesystem
+fs_uri = 'o3fs://<OZONE_CLUSTER>/<BUCKET_NAME>'
+ozone_fs = fs.O3FileSystem(fs_uri)
+
+# List files in the bucket
+files = ozone_fs.ls('/')
+print(files)
+
+# Add a file to the bucket
+file_name = '/example_file.txt'
+file_contents = 'This is an example file.'
+with ozone_fs.open_output_stream(file_name) as f:
+    f.write(file_contents.encode())
+
+# Remove a file from the bucket
+ozone_fs.delete(file_name)
+
+# Copy a file in the bucket
+src_file_name = '/example_file.txt'
+dst_file_name = '/new_file.txt'
+with ozone_fs.open_input_stream(src_file_name) as src_f:
+    with ozone_fs.open_output_stream(dst_file_name) as dst_f:
+        dst_f.write(src_f.read())
+
+# Rename a file in the bucket
+src_file_name = '/new_file.txt'
+dst_file_name = '/renamed_file.txt'
+ozone_fs.rename(src_file_name, dst_file_name)
+
+# Delete a file from the bucket
+ozone_fs.delete(dst_file_name)
+
+This code snippet first connects to the OZONE filesystem using the fs_uri variable, which should be set to the URI of your OZONE cluster and bucket.
+
+The code then lists the files in the bucket using the ls method of the ozone_fs object.
+
+Next, the code adds a new file to the bucket using the open_output_stream method and writes the contents to it.
+
+The code then removes the file from the bucket using the delete method of the ozone_fs object.
+
+The code then copies the contents of an existing file to a new file using the open_input_stream and open_output_stream methods of the ozone_fs object.
+
+Next, the code renames the file using the rename method of the ozone_fs object.
+
+Finally, the code deletes the file using the delete method of the ozone_fs object.
+
+
+
+
+

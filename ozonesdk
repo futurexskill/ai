@@ -51,3 +51,20 @@ Finally, the code deletes the file using the delete method of the ozone_fs objec
 
 This command imports the fs module from the pyarrow package, which provides a Python interface to the OZONE FileSystem.
 
+import pyarrow.fs as fs
+
+# Ozone file system URI
+ozone_uri = 'o3://ozone-cluster'
+
+# Path to the file to read
+file_path = '/mydirectory/myfile.txt'
+
+# Connect to the Ozone file system
+fs_handler = fs.FileSystem.from_uri(ozone_uri)
+
+# Use the FileSystem API to read the file
+with fs_handler.open_input_stream(file_path) as f:
+    contents = f.read()
+
+# Print the contents of the file
+print(contents)

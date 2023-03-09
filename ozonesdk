@@ -1,70 +1,32 @@
-import pyarrow as pa
-import pyarrow.fs as fs
+Presently, data is stored by users on a NAS drive that can only be accessed from the edge drive.
 
-# Connect to the OZONE filesystem
-fs_uri = 'o3fs://<OZONE_CLUSTER>/<BUCKET_NAME>'
-ozone_fs = fs.O3FileSystem(fs_uri)
+Users are unable to use HDFS as a storage solution due to its current full storage capacity.
 
-# List files in the bucket
-files = ozone_fs.ls('/')
-print(files)
+From a privacy standpoint, it is currently impossible to determine the content of files stored on HDFS and Edge/NAS.
 
-# Add a file to the bucket
-file_name = '/example_file.txt'
-file_contents = 'This is an example file.'
-with ozone_fs.open_output_stream(file_name) as f:
-    f.write(file_contents.encode())
+There is no file or data retention and expiry system in place.
 
-# Remove a file from the bucket
-ozone_fs.delete(file_name)
+Enforcement of privacy policies is either difficult or overconstrained
 
-# Copy a file in the bucket
-src_file_name = '/example_file.txt'
-dst_file_name = '/new_file.txt'
-with ozone_fs.open_input_stream(src_file_name) as src_f:
-    with ozone_fs.open_output_stream(dst_file_name) as dst_f:
-        dst_f.write(src_f.read())
+The current Hadoop edge node hardware is not being used to its maximum capacity because there is no load balancing in place at present.
 
-# Rename a file in the bucket
-src_file_name = '/new_file.txt'
-dst_file_name = '/renamed_file.txt'
-ozone_fs.rename(src_file_name, dst_file_name)
+At present, the availability of Hadoop edge nodes is restricted, and the cost of Cloudera licensing for Hadoop edge nodes is expected to rise in the future. This makes GPUs too expensive with the current architecture.
 
-# Delete a file from the bucket
-ozone_fs.delete(dst_file_name)
-
-This code snippet first connects to the OZONE filesystem using the fs_uri variable, which should be set to the URI of your OZONE cluster and bucket.
-
-The code then lists the files in the bucket using the ls method of the ozone_fs object.
-
-Next, the code adds a new file to the bucket using the open_output_stream method and writes the contents to it.
-
-The code then removes the file from the bucket using the delete method of the ozone_fs object.
-
-The code then copies the contents of an existing file to a new file using the open_input_stream and open_output_stream methods of the ozone_fs object.
-
-Next, the code renames the file using the rename method of the ozone_fs object.
-
-Finally, the code deletes the file using the delete method of the ozone_fs object.
+Integrating cloud tools with NAS drives and edge nodes is not an easy process.
 
 
 
-This command imports the fs module from the pyarrow package, which provides a Python interface to the OZONE FileSystem.
 
-import pyarrow.fs as fs
 
-# Ozone file system URI
-ozone_uri = 'o3://ozone-cluster'
 
-# Path to the file to read
-file_path = '/mydirectory/myfile.txt'
 
-# Connect to the Ozone file system
-fs_handler = fs.FileSystem.from_uri(ozone_uri)
 
-# Use the FileSystem API to read the file
-with fs_handler.open_input_stream(file_path) as f:
-    contents = f.read()
 
-# Print the contents of the file
-print(contents)
+
+
+
+
+
+
+
+

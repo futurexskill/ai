@@ -1,0 +1,14 @@
+view: my_view {
+  dimension: my_dimension {
+    type: my_custom_type {
+      sql: ${TABLE}.my_column ;;
+    }
+  }
+}
+
+# Define the custom type with constraints
+custom_type: my_custom_type {
+  extends: [int]
+  max: 100
+  min: 0
+}

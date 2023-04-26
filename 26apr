@@ -1,1 +1,1 @@
-What we have learned is that the performance issue is occurring on specific edge nodes. While Spark to Pandas conversion works correctly on some edge nodes, it fails on others. We are working with the Bizops team to investigate the root cause of the issue and have also raised it with the Hadoop support team.
+The new dataset catalog page will provide additional insights, including the number of records, attributes, counts, disk space, owners, and preview records. This will offer greater visibility to data scientists.

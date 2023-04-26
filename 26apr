@@ -1,0 +1,7 @@
+What: The Polar library has been included in Workbench 2.0 SDK, allowing data scientists to perform faster exploratory data analysis.
+
+So What: Polars is an alternative to the Pandas library, with an API that enables tasks such as filtering, aggregation, sorting, and joining data frames. It also supports advanced data processing, including time series analysis, machine learning, and geospatial analysis.
+
+Impact: By using Polars, data scientists can achieve a 5x performance improvement, particularly when analyzing high volumes of transactional data. This will save compute resources on the cluster.
+
+Now What: The inclusion of Polars in Workbench 2.0 represents a significant improvement for data analysis workflows, which will be shared with data scientists. They can now leverage the power of Polars to gain faster insights and make more informed decisions from their data.
